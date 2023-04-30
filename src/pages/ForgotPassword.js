@@ -33,14 +33,6 @@ const ForgotPassword = (props) => {
                 </div>
 
                 <div>
-                    {/* <NavLink
-                        className=""
-                        activeClassName=""
-                        to="/forgot-password"
-                        exact
-                    >
-                        Forgot Password?
-                    </NavLink> */}
 
                 </div>
             </div>
