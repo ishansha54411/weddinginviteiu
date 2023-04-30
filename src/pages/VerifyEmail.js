@@ -9,7 +9,7 @@ const VerifyEmail = (props) => {
   const navigate = useNavigate();
     useEffect(()=>{
         (async ()=>{
-            let response= await portalAPI.put("authenticate/confirm-email",{
+            let response= await portalAPI().put("authenticate/confirm-email",{
                 email:searchParams.get("email"),
                 token:searchParams.get("token")
             });

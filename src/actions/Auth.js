@@ -1,7 +1,7 @@
 import { ActionName } from './index'
 import portalAPI from '../api'
 export const SignIn=(email,password)=>async dispatch=>{
-    var response=await portalAPI.post('authenticate/login',{
+    var response=await portalAPI().post('authenticate/login',{
         email:email,
         password: password
     })

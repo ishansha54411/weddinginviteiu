@@ -11,13 +11,12 @@ const RegisterUser = (props) => {
     
   const navigate = useNavigate();
     const OnSubmit = async formValues => {
-        let response=await portalAPI.post('authenticate/register',{
+        let response=await portalAPI().post('authenticate/register',{
             email: formValues.email,
             password: formValues.password,
             name: formValues.name,
             verifyTokenURL:window.location.origin+'/weddinginviteiu/#/verify-email'
         });
-        console.log(response);
         CommonFunctions.Message(response.data.statusCode,response.data.message)
         if(response.data.statusCode===1){
             navigate("/");
