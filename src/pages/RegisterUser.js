@@ -15,7 +15,7 @@ const RegisterUser = (props) => {
             email: formValues.email,
             password: formValues.password,
             name: formValues.name,
-            verifyTokenURL:window.location.origin+'/verify-email'
+            verifyTokenURL:window.location.origin+'weddinginviteiu/verify-email'
         });
         console.log(response);
         CommonFunctions.Message(response.data.statusCode,response.data.message)
