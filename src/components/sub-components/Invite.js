@@ -89,8 +89,9 @@ const Invite = ({ bgImage }) => {
                                                                 else {
                                                                     setSelectedInvites(selectedInvites.filter(e => e != invite.id))
                                                                 }
-                                                            }} />{invite.title}</> : <></>
+                                                            }} /></> : <></>
                                                     }
+                                                    {invite.title}
                                                 </h3>
 
                                                 <div class="event-col" onClick={() => {
