@@ -26,7 +26,7 @@ const Invite = ({ bgImage }) => {
         }
     }
     useEffect(() => {
-        (async () => {
+        var GetInvites=(async () => {
             let response;
 
             if (auth.isSignedIn && new Date(auth.expirationTime) > new Date() && (new URL(document.location)).searchParams.get("event") == null) {
@@ -46,7 +46,8 @@ const Invite = ({ bgImage }) => {
                 }
             }
 
-        })()
+        })
+        GetInvites()
 
     })
     console.log(selectedInvites)
