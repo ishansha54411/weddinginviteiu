@@ -40,7 +40,7 @@ const App=()=>{
     return (
       <BrowserRouter basename="https://ishansha54411.github.io/weddinginviteiu">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<RegisterUser/>}/>
           <Route path="/verify-email" element={<VerifyEmail/>}/>
