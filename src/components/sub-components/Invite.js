@@ -30,12 +30,12 @@ const Invite = ({ bgImage }) => {
             let response;
             const [hash, query] = window.location.href.split('#')[1].split('?')
             const params = Object.fromEntries(new URLSearchParams(query))
-            if (auth.isSignedIn && new Date(auth.expirationTime) > new Date() && (new URL(document.location)).searchParams.get("event") == null) {
+            if (auth.isSignedIn && new Date(auth.expirationTime) > new Date() && params.event == null) {
                 response = await portalAPI.get(`invites/get-all-invites`)
             }
             else if (params.event != null) {
                 response = await portalAPI.post(`invites/get-invites`, {
-                    key: (new URL(document.location)).searchParams.get("event")
+                    key: params.event
                 })
             }
             if (response != null) {
