@@ -51,7 +51,7 @@ const Invite = ({ bgImage }) => {
         GetInvites()
         // alert("hi")
 
-    })
+    },[])
     console.log(selectedInvites)
     if (invites.length > 0) {
         return (<div id="fh5co-event" class="fh5co-bg" style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: 'right' }}>
