@@ -39,7 +39,7 @@ const App=()=>{
     // return (
     //     <RouterProvider router={router} />
     //   )
-    return (<div>hi</div>>)
+    return (<div>hi</div>)
 }
 
 export default App;
