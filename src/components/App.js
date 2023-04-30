@@ -36,9 +36,10 @@ import VerifyEmail from "../pages/VerifyEmail";
   ]);
   
 const App=()=>{
-    return (
-        <RouterProvider router={router} />
-      )
+    // return (
+    //     <RouterProvider router={router} />
+    //   )
+    return (<div>hi</div>>)
 }
 
 export default App;
