@@ -1,0 +1,25 @@
+.js .animate-box{
+    opacity:0.9 !important;
+}
+@media (max-width: 768px)  {
+    .fh5co-cover{
+        object-fit: cover;
+        height: 100%;
+    }
+}
+.couple-half .groom img, .couple-half .bride img{
+    object-fit: cover !important;
+}
+.wrap-input100 input{
+    border:transparent;
+    outline: transparent !important;
+}
+.pb-3{
+    font-family: "Sacramento", Arial, serif;
+    font-weight: 400;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+.container-login100-form-btn{
+    margin-top: 25px;
+}
