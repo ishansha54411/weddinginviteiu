@@ -48,6 +48,7 @@ const Invite = ({ bgImage }) => {
 
         })
         GetInvites()
+        alert("hi")
 
     })
     console.log(selectedInvites)
