@@ -38,7 +38,7 @@ import VerifyEmail from "../pages/VerifyEmail";
   
 const App=()=>{
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="https://ishansha54411.github.io/weddinginviteiu/">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login/>}/>
