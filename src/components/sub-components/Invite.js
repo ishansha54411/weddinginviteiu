@@ -14,7 +14,7 @@ const Invite = ({ bgImage }) => {
     });
     const GenerateLink = async () => {
         if (selectedInvites != '') {
-            const response = await portalAPI.post('invites/generate-invite',
+            const response = await portalAPI().post('invites/generate-invite',
                 {
                     inviteURL: window.location.origin + '/weddinginviteiu/#?event=',
                     selectedInvites: selectedInvites.join('|')
@@ -31,10 +31,10 @@ const Invite = ({ bgImage }) => {
             const [hash, query] = window.location.href.split('#')[1].split('?')
             const params = Object.fromEntries(new URLSearchParams(query))
             if (auth.isSignedIn && new Date(auth.expirationTime) > new Date() && params.event == null) {
-                response = await portalAPI.get(`invites/get-all-invites`)
+                response = await portalAPI().get(`invites/get-all-invites`)
             }
             else if (params.event != null) {
-                response = await portalAPI.post(`invites/get-invites`, {
+                response = await portalAPI().post(`invites/get-invites`, {
                     key: params.event
                 })
             }

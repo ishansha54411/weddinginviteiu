@@ -9,7 +9,7 @@ const UpdatePassword = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
     const OnSubmit = async formValues => {
-        let response=await portalAPI.post('authenticate/update-password',{
+        let response=await portalAPI().post('authenticate/update-password',{
             password:formValues.password,
             email:searchParams.get("email"),
             token:searchParams.get("token")

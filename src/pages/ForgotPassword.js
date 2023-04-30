@@ -9,7 +9,7 @@ const ForgotPassword = (props) => {
 
   const navigate = useNavigate();
     const OnSubmit = async formValues => {
-        let response=await portalAPI.post('authenticate/forgot-password',{
+        let response=await portalAPI().post('authenticate/forgot-password',{
             email: formValues.email,
             verifyTokenURL:window.location.origin+'/weddinginviteiu/#/update-password'
         });

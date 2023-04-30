@@ -19,7 +19,7 @@ const Login = (props) => {
         navigate("/");
     }
     const OnSubmit = async formValues => {
-        var response=await portalAPI.post('authenticate/login',{
+        var response=await portalAPI().post('authenticate/login',{
             email:formValues.email,
             password: formValues.password
         })
