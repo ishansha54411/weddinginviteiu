@@ -36,9 +36,9 @@ import VerifyEmail from "../pages/VerifyEmail";
   ]);
   
 const App=()=>{
-    return (<React.StrictMode>
+    return (
         <RouterProvider router={router} />
-      </React.StrictMode>)
+      )
 }
 
 export default App;
