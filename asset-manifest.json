@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/weddinginviteiu/static/css/main.b3eeeea7.css",
+    "main.js": "/weddinginviteiu/static/js/main.c1fa5346.js",
+    "static/media/J51A2354.JPG": "/weddinginviteiu/static/media/J51A2354.79384a57df080be9e8e3.JPG",
+    "static/media/DSC05128.JPG": "/weddinginviteiu/static/media/DSC05128.6696fd8748e54bee8bdf.JPG",
+    "static/media/DSC06203.JPEG": "/weddinginviteiu/static/media/DSC06203.e2c150ffa99be5d2be39.JPEG",
+    "static/media/3B1A82E4-1C9D-461D-94A1-B1BC1505CB42.jpeg": "/weddinginviteiu/static/media/3B1A82E4-1C9D-461D-94A1-B1BC1505CB42.0b4d2566306429da4e29.jpeg",
+    "static/media/J51A3005.JPG": "/weddinginviteiu/static/media/J51A3005.30a966587c245a0e901b.JPG",
+    "static/media/BG-Img.jpeg": "/weddinginviteiu/static/media/BG-Img.9d4999cc582d7896d989.jpeg",
+    "static/media/IMG_5481.jpg": "/weddinginviteiu/static/media/IMG_5481.85c74faabb079cccf0ef.jpg",
+    "static/media/groom_new.JPG": "/weddinginviteiu/static/media/groom_new.cd93937c03e903178fc2.JPG",
+    "static/media/ThirdDate.jpeg": "/weddinginviteiu/static/media/ThirdDate.49f79446e2a72dbdbd6a.jpeg",
+    "static/media/FirstDate.jpeg": "/weddinginviteiu/static/media/FirstDate.7f465723a0131b462e62.jpeg",
+    "index.html": "/weddinginviteiu/index.html",
+    "main.b3eeeea7.css.map": "/weddinginviteiu/static/css/main.b3eeeea7.css.map",
+    "main.c1fa5346.js.map": "/weddinginviteiu/static/js/main.c1fa5346.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3eeeea7.css",
+    "static/js/main.c1fa5346.js"
+  ]
+}
