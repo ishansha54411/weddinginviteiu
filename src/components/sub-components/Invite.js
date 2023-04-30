@@ -16,7 +16,7 @@ const Invite = ({ bgImage }) => {
         if (selectedInvites != '') {
             const response = await portalAPI.post('invites/generate-invite',
                 {
-                    inviteURL: window.location.origin + '?event=',
+                    inviteURL: window.location.origin + '/weddinginviteiu/#?event=',
                     selectedInvites: selectedInvites.join('|')
                 });
             setInviteURL(response.data.data)
