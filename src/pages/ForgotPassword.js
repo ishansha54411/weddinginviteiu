@@ -11,7 +11,7 @@ const ForgotPassword = (props) => {
     const OnSubmit = async formValues => {
         let response=await portalAPI.post('authenticate/forgot-password',{
             email: formValues.email,
-            verifyTokenURL:window.location.origin+'/weddinginviteiu/update-password'
+            verifyTokenURL:window.location.origin+'/weddinginviteiu/#/update-password'
         });
         CommonFunctions.Message(response.data.statusCode,response.data.message)
         if(response.data.statusCode===1){
