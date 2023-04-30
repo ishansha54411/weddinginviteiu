@@ -12,34 +12,34 @@ import VerifyEmail from "../pages/VerifyEmail";
     {
       path: "/",
       element: <Home/>,
-    },
-    {
-      path:"/login",
-      element:<Login/>
-    },
-    {
-      path:"/register",
-      element:<RegisterUser/>
-    },
-    {
-      path:"/verify-email",
-      element:<VerifyEmail/>
-    },
-    {
-      path:'/forgot-password',
-      element:<ForgotPassword/>
-    },
-    {
-      path:'/update-password',
-      element:<UpdatePassword/>
     }
+    //,
+    // {
+    //   path:"/login",
+    //   element:<Login/>
+    // },
+    // {
+    //   path:"/register",
+    //   element:<RegisterUser/>
+    // },
+    // {
+    //   path:"/verify-email",
+    //   element:<VerifyEmail/>
+    // },
+    // {
+    //   path:'/forgot-password',
+    //   element:<ForgotPassword/>
+    // },
+    // {
+    //   path:'/update-password',
+    //   element:<UpdatePassword/>
+    // }
   ]);
   
 const App=()=>{
-    // return (
-    //     <RouterProvider router={router} />
-    //   )
-    return (<div>hi</div>)
+    return (
+        <RouterProvider router={router} />
+      )
 }
 
 export default App;
