@@ -17,6 +17,7 @@ import { useSelector } from 'react-redux'
 import Invite from "../components/sub-components/Invite";
 import InviteBG from '../images/DSC05128.JPG'
 
+
 const Home=()=>{
     const auth=useSelector((state)=>{
         return state.Auth
@@ -24,7 +25,8 @@ const Home=()=>{
     return <>
         <Jumbotron 
             title="Ishan & Urvashi" 
-            desc="We Are Getting Married!" 
+            unmarrieddesc="We Are Getting Married!"
+            marrieddesc="Happyly Married on 11-May-2023" 
             date={new Date("2023-05-11").setHours(0,0,0,0)}
             bgImage={MainBackgroundImage}/>
         <GreetingCard 
