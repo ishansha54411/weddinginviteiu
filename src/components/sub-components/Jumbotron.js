@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout } from '../../store'
 
-const Jumbotron = ({ title, pendingmessage,completionmessage, date, bgImage }) => {
+const Jumbotron = ({ title, pendingmessage,completionmessage, date, bgImage,ongoingmessage }) => {
 	const auth = useSelector((state) => {
 		return state.Auth
 	});
@@ -67,8 +67,11 @@ const Jumbotron = ({ title, pendingmessage,completionmessage, date, bgImage }) =
 						<div className="display-t">
 							<div className="display-tc animate-box" data-animate-effect="fadeIn">
 								<h1>{title}</h1>
-								{(date>new Date()?<><h2>{pendingmessage}</h2>
-								<CountDown date={date} /></>:<h2>{completionmessage}</h2>)}
+								{(
+									date>new Date()?<><h2>{pendingmessage}</h2><CountDown date={date} /></>:
+										(date==new Date().setHours(0,0,0,0))?
+										<h2>{ongoingmessage}</h2>
+										:<h2>{completionmessage}</h2>)}
 								{/* <h2>{desc}</h2>
 								<CountDown date={date} /> */}
 							</div>

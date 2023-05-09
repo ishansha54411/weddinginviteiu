@@ -26,6 +26,7 @@ const Home=()=>{
         <Jumbotron 
             title="Ishan & Urvashi" 
             pendingmessage="We Are Getting Married!"
+            ongoingmessage="We are getting Married Today!"
             completionmessage="Happyly Married on 11 May, 2023" 
             date={new Date("2023-05-11").setHours(0,0,0,0)}
             bgImage={MainBackgroundImage}/>
