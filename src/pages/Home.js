@@ -25,8 +25,8 @@ const Home=()=>{
     return <>
         <Jumbotron 
             title="Ishan & Urvashi" 
-            unmarrieddesc="We Are Getting Married!"
-            marrieddesc="Happyly Married on 11-May-2023" 
+            pendingmessage="We Are Getting Married!"
+            completionmessage="Happyly Married on 11 May, 2023" 
             date={new Date("2023-05-11").setHours(0,0,0,0)}
             bgImage={MainBackgroundImage}/>
         <GreetingCard 
@@ -41,7 +41,7 @@ const Home=()=>{
                     title="Our Story!"
                     message="Together Forever"
                     desc="Time passes but memories are forever."
-                    timeline={[
+                    timeline={[//require('../images/J51A2354.JPG')
                             {image:FirstMeet,title:'First Meet',date:'September 28, 2022',desc:''},
                             {image:FirstDate,title:'First Date',date:'October 21, 2022',desc:''},
                             {image:Engagement,title:'Engagement',date:'December 11, 2022',desc:''},

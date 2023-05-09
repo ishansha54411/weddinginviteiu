@@ -9,33 +9,7 @@ import UpdatePassword from "../pages/UpdatePassword";
 import VerifyEmail from "../pages/VerifyEmail";
 
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Home/>,
-  //   },
-  //   {
-  //     path:"/login",
-  //     element:<Login/>
-  //   },
-  //   {
-  //     path:"/register",
-  //     element:<RegisterUser/>
-  //   },
-  //   {
-  //     path:"/verify-email",
-  //     element:<VerifyEmail/>
-  //   },
-  //   {
-  //     path:'/forgot-password',
-  //     element:<ForgotPassword/>
-  //   },
-  //   {
-  //     path:'/update-password',
-  //     element:<UpdatePassword/>
-  //   }
-  // ]);
-  
+
 const App=()=>{
     return (
       <HashRouter>
@@ -48,7 +22,6 @@ const App=()=>{
           <Route path="/update-password" element={<UpdatePassword/>}/>
         </Routes>
       </HashRouter>
-        // <RouterProvider router={router} />
       )
 }
 
