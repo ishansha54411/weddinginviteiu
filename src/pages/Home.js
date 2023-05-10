@@ -99,14 +99,14 @@ const Home=()=>{
                     title="Our Story!"
                     message="Together Forever"
                     desc="Time passes but memories are forever."
-                    timeline={[
-                            {image:require('../images/J51A2354.JPG'),title:'First Meet',date:'September 28, 2022',desc:''},
-                            {image:require('../images/FirstDate.jpeg'),title:'First Date',date:'October 21, 2022',desc:''},
-                            {image:require('../images/BG-Img.jpeg'),title:'Engagement',date:'December 11, 2022',desc:''},
-                            {image:require('../images/3B1A82E4-1C9D-461D-94A1-B1BC1505CB42.jpeg'),title:'Second Date',date:'December 18, 2022',desc:''},
-                            {image:require('../images/ThirdDate.jpeg'),title:'Third Date',date:'January 29, 2023',desc:''},
-                            {image:require('../images/IMG_5481.jpg'),title:'Apartment Search',date:'March 25, 2023',desc:''},
-                            {image:require('../images/DSC06203.JPEG'),title:'Pre Wedding',date:'April 9/10, 2023',desc:''}
+                    timeline={[//require('../images/J51A2354.JPG')
+                            {image:FirstMeet,title:'First Meet',date:'September 28, 2022',desc:''},
+                            {image:FirstDate,title:'First Date',date:'October 21, 2022',desc:''},
+                            {image:Engagement,title:'Engagement',date:'December 11, 2022',desc:''},
+                            {image:SecondDate,title:'Second Date',date:'December 18, 2022',desc:''},
+                            {image:ThirdDate,title:'Third Date',date:'January 29, 2023',desc:''},
+                            {image:FindingApartment,title:'Apartment Search',date:'March 25, 2023',desc:''},
+                            {image:PreWedding,title:'Pre Wedding',date:'April 9/10, 2023',desc:''}
                         ]}
                     // timeline={timeline}
                     />
