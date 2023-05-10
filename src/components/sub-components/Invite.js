@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import portalAPI from '../../api/index'
 import { useSelector, useDispatch } from 'react-redux'
-import $ from 'jquery'
-import { toast } from "react-toastify";
 import { CommonFunctions } from "../../methods";
 
-const Invite = ({ bgImage }) => {
-    const [invites, setInvites] = useState([])
+const Invite = ({ bgImage,timeline }) => {
     const [selectedInvites, setSelectedInvites] = useState([])
     const [InviteURL, setInviteURL] = useState('');
     const auth = useSelector((state) => {
@@ -25,35 +22,8 @@ const Invite = ({ bgImage }) => {
             CommonFunctions.Message(0, "please select an invite to continue.")
         }
     }
-    useEffect(() => {
-        var GetInvites=(async () => {
-            let response;
-            const [hash, query] = window.location.href.split('#')[1].split('?')
-            const params = Object.fromEntries(new URLSearchParams(query))
-            if (auth.isSignedIn && new Date(auth.expirationTime) > new Date() && params.event == null) {
-                response = await portalAPI().get(`invites/get-all-invites`)
-            }
-            else if (params.event != null) {
-                response = await portalAPI().post(`invites/get-invites`, {
-                    key: params.event
-                })
-            }
-            if (response != null) {
-                if (response.data.statusCode == 1) {
-                    setInvites(response.data.data)
-                }
-                else {
-                    CommonFunctions.Message(response.data.statusCode, response.data.message)
-                }
-            }
-
-        })
-        GetInvites()
-        // alert("hi")
-
-    },[])
-    console.log(selectedInvites)
-    if (invites.length > 0) {
+    
+    if (timeline.length > 0) {
         return (<div id="fh5co-event" class="fh5co-bg" style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: 'right' }}>
             <div class="overlay"></div>
             <div class="container">
@@ -75,7 +45,7 @@ const Invite = ({ bgImage }) => {
                         <div class="display-tc">
                             <div class="col-md-10 col-md-offset-1 invite-container" style={{ display: '-webkit-inline-box', overflow: 'auto' }}>
                                 {
-                                    invites.map((invite) => {
+                                    timeline.map((invite) => {
                                         return (<div class="col-md-6 col-sm-6 text-center">
                                             <div class="event-wrap animate-box fadeInUp animated-fast">
                                                 <h3>
