@@ -25,8 +25,7 @@ const Home=()=>{
         return state.Auth
     });
 
-    const [invites, setInvites] = useState([]);
-    const [timeline,setTimeline]=useState([]);
+    const [invites, setInvites] = useState([])
 
     useEffect(() => {
         var GetInvites=(async () => {
@@ -35,14 +34,18 @@ const Home=()=>{
             {
                 const [hash, query] = window.location.href.split('#')[1].split('?')
                 const params = Object.fromEntries(new URLSearchParams(query))
-                if (params.event != null) {
+                if (auth.isSignedIn && new Date(auth.expirationTime) > new Date()) {
+                    response = await portalAPI().get(`invites/get-all-invites`)
+                }
+                else{
                     response = await portalAPI().post(`invites/get-invites`, {
                         key: params.event
                     })
                 }
             }
-            else{
-                if (auth.isSignedIn && new Date(auth.expirationTime) > new Date()){
+            else
+            {
+                if (auth.isSignedIn && new Date(auth.expirationTime) > new Date()) {
                     response = await portalAPI().get(`invites/get-all-invites`)
                 }
             }
@@ -55,30 +58,10 @@ const Home=()=>{
                 }
             }
 
-        });
-        var GetTimeLine=(async ()=>{
-            let response;
-            if (auth.isSignedIn && new Date(auth.expirationTime) > new Date())
-            {
-                response = await portalAPI().get(`timeline/get-all-timelines`);
-            }
-            if(response!=null){
-                if (response.data.statusCode == 1) {
-                    var result=response.data.data;
-                    setTimeline(result.map((timeline)=>{
-                        return {...timeline,image:require(timeline.imageName)}
-                    }))
-                }
-                else {
-                    CommonFunctions.Message(response.data.statusCode, response.data.message)
-                }
-            }
-        });
-        GetTimeLine()
+        })
         GetInvites()
 
     },[])
-    console.log(timeline);
     return <>
         <Jumbotron 
             title="Ishan & Urvashi" 
@@ -108,7 +91,7 @@ const Home=()=>{
                             {image:FindingApartment,title:'Apartment Search',date:'March 25, 2023',desc:''},
                             {image:PreWedding,title:'Pre Wedding',date:'April 9/10, 2023',desc:''}
                         ]}
-                    // timeline={timeline}
+                    // timeline={}
                     />
                         </>:<></>}
 
